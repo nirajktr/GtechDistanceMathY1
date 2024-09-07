@@ -1,0 +1,108 @@
+\documentclass[11pt]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[bmargin=1.0in]{geometry}
+\geometry{margin=0.75in}
+\geometry{tmargin=0.75in}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+\Large{MATH 1554 QH, Written Assignment 1}
+\end{center}
+
+\vspace{0.5 cm}
+
+\begin{questions}
+  % Question 1
+  \question[4] Consider the data in the table below.
+  \begin{table}[h]\small
+    \begin{center}
+      \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $x$ & -1 & 0 & 1 & 2 \\
+        \hline
+        $y(x)$ & -1 & 1.5 & 2 & -2.5 \\
+        \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  \begin{parts}
+    \part Construct an augmented matrix that can be used to compute the coefficients $a_0$, $a_1$, and $a_2$ of the polynomial $y(x) = a_0 + a_1 x + a_2x^2 + a_3x^3$ that passes through the points in the table above.
+    \vspace{0.5cm}
+    The augmented matrix for this system is:
+    \[
+    \begin{bmatrix}
+      1 & -1 & 1 & -1 & -1 \\
+      1 & 0 & 0 & 0 & 1.5 \\
+      1 & 1 & 1 & 1 & 2 \\
+      1 & 2 & 4 & 8 & -2.5
+    \end{bmatrix}
+    \]
+
+    \part Reduce the augmented matrix that you constructed in part (a) to RREF.
+    
+    The reduced row echelon form (RREF) of the matrix is:
+    \[
+    \begin{bmatrix}
+      1 & 0 & 0 & 0 & a_0 \\
+      0 & 1 & 0 & 0 & a_1 \\
+      0 & 0 & 1 & 0 & a_2 \\
+      0 & 0 & 0 & 1 & a_3
+    \end{bmatrix}
+    \]
+
+    \part Clearly state the values of $a_0$, $a_1$, $a_2$, and $a_3$.
+    
+    From the RREF matrix, we can read off the values:
+    \begin{align*}
+      a_0 &= \text{[Value from RREF]} \\
+      a_1 &= \text{[Value from RREF]} \\
+      a_2 &= \text{[Value from RREF]} \\
+      a_3 &= \text{[Value from RREF]}
+    \end{align*}
+  \end{parts}
+
+\newpage
+
+  % Question 2
+  \question[5] Consider the linear system of equations below.
+  \begin{align}
+    x_1+x_2+2x_3 +7x_5 &= 20 \\
+    x_2 + 3x_5 &= 1 \\
+    x_3 +5x_5 &= 2
+  \end{align}
+  The variables in the system are $x_1$, $x_2$, $x_3$, $x_4$, and $x_5$.
+  \begin{parts}
+    \part Express the system as a $3\times6$ augmented matrix.
+    \part Reduce the system you constructed in part (a) to RREF.
+    \part Express the solution set of the linear system in parametric vector form.
+  \end{parts}
+
+\newpage
+  % Question 3
+  \question[1] There are two parts to this question
+  \begin{parts}
+    \part Please state your name, facilitator, and high school (in case we need to get in contact with them for any reason). Your facilitator is someone at your high school.
+    \part Please ensure that:
+    \begin{enumerate}
+      \item Your work is legible in the files you uploaded.
+      \item Questions are answered in the order in which they were given.
+      \item During the upload process please indicate which pages correspond to which question.
+      \item None of your pages are upside down or sideways.
+      \item Each question is answered on its own page (or pages). Do not have more than one question on any given page.
+      \item Your work is submitted as a single PDF file.
+      \item You uploaded your work to the correct location in Gradescope.
+    \end{enumerate}
+  \end{parts}
+\end{questions}
+
+Please note the following.
+\begin{itemize}
+  \item You can also change the orientation of the pages when you upload in Gradescope. Ensuring that these criteria are met helps ensure that your work is graded efficiently and accurately.
+  \item If you accidentally upload the wrong file that we will have to give you a grade of zero, but that the lowest homework score is dropped.
+\end{itemize}
+
+\end{document}
