@@ -1,0 +1,198 @@
+\documentclass[11pt]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[bmargin=1in, tmargin=0.75in, lmargin=0.75in, rmargin=0.75in]{geometry}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+    \Large{MATH 1554 QH, Written Assignment 2}
+
+    \vspace{0.5cm}
+    \large{Niraj Khatri}
+
+    \vspace{0.5cm}
+    \small{September 2024}
+\end{center}
+
+\vspace{1cm}
+
+\begin{questions}
+
+  % Question 1
+  \question[5] Consider the matrix $A$ and vector $b$ below.
+    \[
+    A = \begin{bmatrix} 
+    4 & 3 & 0 \\ 
+    3 & 2 & 1 \\ 
+    0 & 1 & 2 
+    \end{bmatrix}, 
+    \quad b = \begin{bmatrix} 
+    7 \\ 
+    8 \\ 
+    3 
+    \end{bmatrix}
+    \]
+    The system $Ax = b$, where $x \in \mathbb{R}^3$, can be solved using the LU factorization.
+    \vspace{0.2cm}
+  \begin{parts}
+    \part
+    We first factor $A$ into $LU$, where $L$ is a lower triangular matrix, and $U$ is an echelon form of matrix $A$. To obtain $U$, an echelon form of $A$, we can apply a series of row replacement operations:
+    \begin{align*}
+    A = \begin{bmatrix}
+        4 & 3 & 0 \\
+        3 & 2 & 1 \\
+        0 & 1 & 2 \\
+    \end{bmatrix}
+    &\xrightarrow{R_2 = R_2 - (3/4)R_1}
+    \begin{bmatrix}
+        4 & 3 & 0 \\
+        0 & \frac{-1}{4} & 1 \\
+        0 & 1 & 2 \\
+    \end{bmatrix} \\
+    &\xrightarrow{R_3=R_3+(4)R_2}
+    \begin{bmatrix}
+        4 & 3 & 0 \\
+        0 & \frac{-1}{4} & 1 \\
+        0 & 0 & 6 \\
+    \end{bmatrix}
+\end{align*}
+
+    From the row operations done above, the corresponding $L$$U$ matrix product is:
+    \[
+    A = LU = \begin{bmatrix}
+    1 & 0 & 0 \\
+    \frac{3}{4} & 1 & 0 \\
+    0 & -4 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        4 & 3 & 0 \\
+        0 & \frac{-1}{4} & 1 \\
+        0 & 0 & 6 \\
+    \end{bmatrix}
+    \]
+    \part
+    Now solve $Ly = b$. Substituting $L$ and $b$, we have:
+    \[
+    \begin{bmatrix}
+    1 & 0 & 0 \\
+    \frac{3}{4} & 1 & 0 \\
+    0 & -4 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+    y_1 \\
+    y_2 \\
+    y_3
+    \end{bmatrix}
+    = \begin{bmatrix}
+    7 \\
+    8 \\
+    3
+    \end{bmatrix}
+    \]
+    Solving this, we get:
+    \[
+    y_1 = 7, \quad y_2 = \frac{11}{4}, \quad y_3 = 14
+    \]
+
+    \part
+
+    Now, solve for $x$ using $Ux = y$. Substituting $U$ and the solved values of $y$:
+    \[
+    \begin{bmatrix}
+    4 & 3 & 0 \\
+    0 & -\frac{1}{4} & 1 \\
+    0 & 0 & 6
+    \end{bmatrix}
+    \begin{bmatrix}
+    x_1 \\
+    x_2 \\
+    x_3
+    \end{bmatrix}
+    = \begin{bmatrix}
+    7 \\
+    \frac{11}{4} \\
+    14 \\
+    \end{bmatrix}
+    \]
+    Solving this, we get:
+    \[
+    x_1 = 3, \quad x_2 = -\frac{5}{3}, \quad x_3 = \frac{7}{3} 
+    \]
+  \end{parts}
+
+  \newpage
+
+  % Question 2
+  \question[5] Triangle $S$ is determined by the points $P(1,1), Q(3,1), R(1,2)$. Transform $T$ rotates points counterclockwise about the point $(0,1)$ by $\pi/2$ radians. 
+  \vspace{0.2cm}
+  \begin{parts}
+    \part
+
+    The points $P(1,1)$, $Q(3,1)$, and $R(1,2)$ can be represented in homogeneous coordinates as:
+    \[
+    D = \begin{bmatrix}
+    1 & 3 & 1 \\
+    1 & 1 & 2 \\
+    1 & 1 & 1
+    \end{bmatrix}
+    \]
+
+    \part 
+
+    The transformation matrix for rotating points counterclockwise by $\pi/2$ radians about the point $(0,1)$ is:
+    \[
+    A = \begin{bmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 1 \\
+    0 & 0 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+    0 & -1 & 1 \\
+    1 & 0 & 0 \\
+    0 & 0 & 1
+    \end{bmatrix}
+    = 
+    \begin{bmatrix}
+    0 & -1 & 1 \\
+    1 & 0 & 1 \\
+    0 & 0 & 1
+    \end{bmatrix}
+    \]
+
+    \part 
+
+    The new coordinates of the transformed points can be calculated as $A \cdot D$:
+    \[
+    A \cdot D = \begin{bmatrix}
+    0 & -1 & 1 \\
+    1 & 0 & 1 \\
+    0 & 0 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+    1 & 3 & 1 \\
+    1 & 1 & 2 \\
+    1 & 1 & 1
+    \end{bmatrix}
+    = \begin{bmatrix}
+    0 & 0 & -1 \\
+    2 & 4 & 2 \\
+    1 & 1 & 1
+    \end{bmatrix}
+    \]
+
+    \part
+
+    The coordinates of the triangle after the transformation are: \\
+    $P^\prime = (0,2)$ \\
+    $Q^\prime = (0, 4)$ \\
+    $R^\prime = (-1,2)$ 
+  \end{parts}
+
+  \newpage
+
+\end{questions}
+
+\end{document}
