@@ -1,0 +1,67 @@
+\documentclass[11pt]{exam}
+
+\usepackage{amsmath} % allows for align environment
+\usepackage{amssymb} % 
+\usepackage{array} % for table alignments
+
+% FONT FORMAT
+% \renewcommand*\rmdefault{ppl} % change font to Palatino
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+% ADJUST MARGINS
+\usepackage[bmargin=1.0in]{geometry}
+\geometry{margin=1in}
+\geometry{tmargin=1in}
+
+\begin{document}
+
+\begin{center}
+    \Large MATH 1554 QH \\[2pt] Written Assignment 2
+\end{center}
+\thispagestyle{empty} % suppress page numbering
+
+    
+\noindent Please \textbf{show your work} for each of the questions below.
+
+\begin{questions}
+
+    \question[5] Consider the matrix $A$ and vector $b$ below.
+    $$A = \begin{pmatrix} 4&3&0\\3&2&1\\0&1&2 \end{pmatrix}, \quad b = \begin{pmatrix} 7\\8\\3\end{pmatrix}$$
+    The goal of this exercise is to solve the system $Ax=b$ using the LU factorization, where $x \in \mathbb R^3$.
+    \begin{parts}
+        \part Construct the LU-factorization of matrix $A$. Use at most two row operations to compute $U$.
+        \part Let $y = Ux$. Use your factorization to solve $Ly=b$ for vector $y$.
+        \part Use your vector $y$ from the previous part to solve $Ux=y$.
+    \end{parts}
+    
+    Note that although you are not asked to do so, we recommend confirming that the product $LU$ equals the given $A$ matrix for your $L$ and $U$. Likewise, you can check your work for parts b and c by solving $Ax=b$ without the LU factorization and comparing your results. It isn't necessary to perform these additional calculations, but they can help you check that your work is correct. 
+
+    \question[5] Triangle $S$ is determined by the points $P(1,1), Q(3,1), R(1,2)$. Transform $T$ rotates points counterclockwise about the point $(0,1)$ by $\pi/2$ radians. 
+    \begin{parts}
+        \part Represent the three data points with a matrix, $D$. Use homogeneous coordinates. 
+        \part Construct the standard matrix $A$, so that $T_A(\vec x)=A\vec x$ rotates points about the given point. Use homogeneous coordinates. Express $A$ as a single $3\times 3$ matrix. 
+        \part Use matrix multiplication to determine the image of $S$ under $T$. 
+        \part Clearly state the coordinates of the triangle after the transformation. 
+    \end{parts}
+    Note that although you are not asked to do so, we recommend confirming that your work is correct by plotting the points before and after the transform. 
+\end{questions}
+
+
+\noindent Please ensure that you follow the instructions below. 
+\begin{itemize}
+    \item Your work is legible in the files you uploaded. 
+    \item Questions are answered in the order in which they were given. 
+    \item During the upload process, you indicated which pages correspond to which question.
+    \item During the upload process that none of your pages are upside down or sideways. 
+    \item Each question is answered on its own page (or pages). 
+    \item Your work is submitted as a single PDF file.
+    \item You uploaded your work to the correct location in Gradescope (in other words, make sure that you upload your work for this assignment to the correct assignment).
+\end{itemize}
+\noindent Note that
+\begin{itemize}
+    \item A small amount of points (at most 1 point) will be deducted from the assignment for not following the instructions listed above. 
+    \item You can also change the orientation of the pages when you upload in Gradescope. 
+    \item Ensuring that these criteria are met helps ensure that your work is graded efficiently and accurately. 
+\end{itemize}
+
+\end{document}
