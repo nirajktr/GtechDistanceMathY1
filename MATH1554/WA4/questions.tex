@@ -1,0 +1,80 @@
+\documentclass[11pt]{exam}
+\usepackage{amsmath} % allows for align environment
+\usepackage{amssymb} %
+\usepackage{array} % for table alignments
+% FONT FORMAT
+% \renewcommand*\rmdefault{ppl} % change font to Palatino
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+% ADJUST MARGINS
+\usepackage[bmargin=1.0in]{geometry}
+\geometry{margin=.75in}
+\geometry{tmargin=.75in}
+\begin{document}
+\begin{center}
+\Large MATH 1554 QH \\[2pt] Written Assignment 4
+\end{center}
+\thispagestyle{empty} % suppress page numbering
+\noindent Please \textbf{show your work} for each of the questions below. It is
+ok to use a calculator to check that your calculations that you made by hand were
+correct, but it should be clear how you obtained each step in your work without use
+of a calculator.
+\begin{questions}
+\question[5]
+Consider the following set of vectors in $\mathbb{R}^3$:
+\[
+W = \left\{ \begin{pmatrix} 1 \\ 2 \\ 2 \end{pmatrix}, \begin{pmatrix} 3 \\
+0 \\ 3 \end{pmatrix}, \begin{pmatrix} 7 \\ -1 \\ 2 \end{pmatrix} \right\}.
+\]
+\begin{parts}
+\part Apply the Gram-Schmidt process to convert the set of vectors in \
+( W \) into an orthogonal set of vectors \( U \). Show all steps clearly and
+explicitly compute each orthogonal vector.
+\part Normalize the vectors in \( U \) to produce an orthonormal set of
+vectors.
+\part Using the orthonormal set of vectors from part (b), construct the \
+( Q \) matrix for the QR factorization of \( A \), where \( A \) is the matrix
+whose columns are the vectors in \( W \).
+\part Using the \( Q \) matrix from part (c), construct the corresponding
+upper triangular \( R \) matrix in the QR factorization.
+\end{parts}
+\question[5]
+Consider the following four points: \( P(-1, 0, 1) \), \(Q (0, -1, 0) \), \
+( R(1, 0, 1) \), and \( S(0, 1, 4) \). We want to fit these points to the plane:
+\[
+z = ax + by + c.
+\]
+\begin{parts}
+\part Set up an over-determined system \( A\vec{x} = \vec{z} \), where \( \
+vec{x} = \begin{pmatrix} a \\ b \\ c \end{pmatrix} \) contains the unknown
+coefficients and \( A \) is the data matrix constructed from the given points.
+\part Solve the normal equations to find the least-squares solution for \
+( a \), \( b \), and \( c \).
+\part Use your results from the previous part to determine the plane that
+best fits the given points. In other words, write down the equation of the plane
+that best fits the given data.
+\end{parts}
+\end{questions}
+\noindent Please ensure that you follow the instructions below.
+\begin{itemize}
+\item Your work is legible in the files you uploaded.
+\item Questions are answered in the order in which they were given.
+\item During the upload process, you indicated which pages correspond to which
+question.
+\item During the upload process that none of your pages are upside down or
+sideways.
+\item Each question is answered on its own page (or pages).
+\item Your work is submitted as a single PDF file.
+\item You uploaded your work to the correct location in Gradescope (in other
+words, make sure that you upload your work for this assignment to the correct
+assignment).
+\end{itemize}
+\noindent Note that
+\begin{itemize}
+\item A small amount of points can be deducted for not following the
+instructions above.
+\item You can also change the orientation of the pages when you upload in
+Gradescope.
+\item Ensuring that these criteria are met helps ensure that your work is
+graded efficiently and accurately.
+\end{itemize}
+\end{document}
