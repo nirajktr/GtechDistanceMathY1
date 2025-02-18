@@ -9,8 +9,6 @@ The repository is organized into two main directories:
 - `MATH1554`: Contains all assignments related to Linear Algebra.
 - `MATH2551`: Contains all assignments related to Multivariable Calculus.
 
-Each directory is further divided into subdirectories for each assignment. For example:
-
 ## How to Navigate
 
 1. **MATH1554 (Linear Algebra)**:
