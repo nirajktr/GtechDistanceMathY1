@@ -1,2 +1,2 @@
-# Math1554_WA
-Repository for all MATH 1554 Written Assignments
+# GtechDistanceMathY1
+Repository for all MATH1554 + MATH2551 Written Assignments
